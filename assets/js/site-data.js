@@ -1,5 +1,26 @@
 const CF_BASE = "https://imagedelivery.net/SRt55pBu4n6Lz33qNPNE1g";
 
+export const DSG_BRAND = {
+  tagline: "Talent is everywhere. Opportunity starts here.",
+  positioningLine: "Discovery Sound Garden cultivates possibility. Vanguard Voices lets the world hear what it becomes.",
+  corePromise: "Talent should never be limited by circumstance.",
+  pipeline: ["Education", "Recording opportunity", "Performance outcomes", "Community proof", "Donor story"],
+  typography: {
+    display: "Playfair Display",
+    body: "Gilroy"
+  },
+  colors: {
+    cloud: "#f5f5f7",
+    ink: "#1d1d1f",
+    deepGardenGreen: "#053527",
+    sageGreen: "#4b6553",
+    warmStone: "#e3dec9",
+    earthBrown: "#6f4121",
+    harvestGold: "#c4a25d",
+    softCream: "#fefae0"
+  }
+};
+
 export const DSG_LINKS = {
   internalPages: {
     home: "/",

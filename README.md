@@ -21,6 +21,12 @@ Open `http://localhost:8080` in a browser.
 
 Do not connect the live domain until the homepage, copy, images, donation language, and tracking plan have been reviewed.
 
+## Brand direction
+
+The draft uses the supplied brand kit: Playfair Display-style display typography, Gilroy-style body typography with safe fallbacks, Deep Garden Green, Sage Green, Warm Stone, Earth Brown, Harvest Gold, Cloud, Ink, and Soft Cream. The exact tagline remains: “Talent is everywhere. Opportunity starts here.”
+
+Core messaging in this draft emphasizes the pipeline: Education → Recording opportunity → Performance outcomes → Community proof → Donor story.
+
 ## Editing guide
 
 - Edit homepage copy and structure in `index.html`.
@@ -37,6 +43,7 @@ Do not connect the live domain until the homepage, copy, images, donation langua
 - Transparency and privacy destination pages
 - Final donation/tax language
 - Google Tag Manager, GA4, and Meta Pixel IDs if approved later
+- Licensed brand font files or approved webfont loading plan for Playfair Display and Gilroy
 
 ## Images
 
