@@ -1,11 +1,11 @@
 # Discovery Sound Garden website
 
-Static homepage for Discovery Sound Garden (DSG), a NYC-based 501(c)(3) nonprofit music organization. The current design direction is **Sound Garden Field Guide**: a mobile-first garden map and rehearsal notebook for the Learn → Record → Perform pathway.
+Static homepage for Discovery Sound Garden (DSG), a NYC-based 501(c)(3) nonprofit music organization. The current homepage is a mobile-first Learn → Record → Perform pathway that helps visitors choose a relevant next step as learners, singers, artists, donors, partners, or community allies.
 
 ## Tech stack
 - Plain HTML, CSS, and minimal JavaScript
 - No framework, package manager, or build step
-- Deployable from the repository root on Cloudflare Pages
+- Deployable from the repository root on Cloudflare Pages or GitHub Pages
 
 ## Local preview
 Run a static server from the repo root:
@@ -17,9 +17,10 @@ python3 -m http.server 8080
 Then open `http://localhost:8080`.
 
 ## Centralized site data
-Canonical links, embed URLs, Cloudflare Images placeholders, and analytics TODO placeholders live in `assets/js/site-data.js`.
+Canonical Zeffy donation, Zeffy event notification, Instagram, future Cloudflare Images configuration, and future analytics event names live in `assets/js/site-data.js`.
 
-## Current placeholders
-- Cloudflare Images IDs are placeholders and should be replaced only after final approved imagery is available.
-- Analytics are TODO comments only; no live tracking IDs are installed.
-- Contact email is a placeholder route pending final DSG inbox confirmation.
+## Founder decisions still needed
+- Approved Cloudflare Images IDs for hero, learning, recording, and Vanguard Voices visuals.
+- Final contact or partnership inquiry destination.
+- Confirmed program dates, registration details, and any approved real testimonials or impact metrics.
+- Approved analytics IDs if DSG chooses to add tracking later.
