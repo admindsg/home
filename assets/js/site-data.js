@@ -21,9 +21,6 @@ window.DSG_SITE_DATA = {
     partnerClick: 'partner_click',
     newsletterClick: 'newsletter_click',
     instagramClick: 'instagram_click',
-    mobileNavOpen: 'mobile_nav_open',
-    journeyStageClick: 'journey_stage_click',
-    learningGoalSelect: 'learning_goal_select',
-    recordingStepSelect: 'recording_step_select'
+    mobileNavOpen: 'mobile_nav_open'
   }
 };
