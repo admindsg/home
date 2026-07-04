@@ -166,3 +166,141 @@ p { margin: 0 0 1rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+.journey-rail {
+  position: sticky;
+  top: 4.35rem;
+  z-index: 15;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .25rem;
+  width: min(var(--max), calc(100% - 2rem));
+  margin: .65rem auto 0;
+  padding: .35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 247, 231, .92);
+  box-shadow: 0 .7rem 2rem rgba(16, 59, 49, .08);
+  backdrop-filter: blur(10px);
+}
+.journey-rail a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 2.45rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 950;
+  color: var(--muted);
+}
+.journey-rail a::before {
+  content: "";
+  width: .55rem;
+  height: .55rem;
+  margin-bottom: .08rem;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0 .18rem rgba(20,33,29,.06);
+}
+.journey-rail a[aria-current="true"] {
+  color: var(--ink);
+  background: var(--gold);
+  box-shadow: inset 0 0 0 2px var(--ink);
+}
+
+.build-module, .record-panel {
+  margin-top: 2rem;
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: rgba(255,247,231,.74);
+  box-shadow: var(--shadow);
+}
+.build-options, .record-sequence {
+  display: grid;
+  gap: .55rem;
+  margin: 1rem 0;
+}
+.build-options button, .record-sequence button {
+  min-height: 3rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream);
+  padding: .7rem .9rem;
+  font-weight: 900;
+  color: var(--ink);
+  cursor: pointer;
+}
+.build-options button[aria-selected="true"], .record-sequence button[aria-selected="true"] {
+  border-color: var(--ink);
+  background: var(--gold);
+  box-shadow: .16rem .16rem 0 var(--ink);
+}
+.build-panel {
+  margin: 0;
+  padding: 1rem;
+  border-left: .35rem solid var(--green);
+  background: var(--cream);
+  border-radius: .4rem 1rem 1rem .4rem;
+  font-weight: 750;
+}
+.recording {
+  border-block: 1px solid var(--line);
+}
+.record-sequence {
+  counter-reset: record-step;
+}
+.record-sequence button {
+  position: relative;
+  text-align: left;
+  padding-left: 2.4rem;
+}
+.record-sequence button::before {
+  counter-increment: record-step;
+  content: counter(record-step);
+  position: absolute;
+  left: .65rem;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: var(--deep);
+  color: var(--cream);
+  font-size: .75rem;
+}
+.record-panel strong { display: block; font-size: 1.35rem; margin-bottom: .35rem; }
+.grow-buttons { grid-template-columns: 1fr; }
+
+@media (min-width: 760px) {
+  .journey-rail {
+    position: fixed;
+    top: 50%;
+    left: max(.75rem, calc((100% - var(--max)) / 2 - 5.75rem));
+    transform: translateY(-50%);
+    width: 4.7rem;
+    margin: 0;
+    grid-template-columns: 1fr;
+    border-radius: 1.4rem;
+  }
+  .journey-rail a { min-height: 3.8rem; font-size: .74rem; }
+  .build-options { grid-template-columns: repeat(3, 1fr); }
+  .record-sequence { grid-template-columns: repeat(5, 1fr); }
+  .record-sequence button { text-align: center; padding: 2.2rem .65rem .75rem; }
+  .record-sequence button::before { top: .55rem; left: 50%; translate: -50% 0; }
+  .grow-buttons { grid-template-columns: 1fr; }
+}
+.journey-line {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 1rem;
+  padding: .45rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,247,231,.72);
+  color: var(--deep);
+  font-weight: 950;
+}
