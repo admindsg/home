@@ -8,8 +8,23 @@
   });
 
   const embed = document.querySelector('[data-zeffy-embed]');
-  if (embed && links.eventNotifications) {
-    embed.setAttribute('src', links.eventNotifications);
+  if (embed && links.eventNotifications) embed.setAttribute('src', links.eventNotifications);
+
+  const menuButton = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  if (menuButton && menu) {
+    menuButton.addEventListener('click', () => {
+      const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!expanded));
+      menu.toggleAttribute('data-open', !expanded);
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menu.removeAttribute('data-open');
+      });
+    });
   }
 
   const menuButton = document.querySelector('[data-menu-toggle]');
@@ -78,4 +93,63 @@
       detail.dataset.state = detail.open ? 'open' : 'closed';
     });
   });
+
+  const impactButtons = Array.from(document.querySelectorAll('[data-impact]'));
+  const impactTitle = document.querySelector('[data-impact-title]');
+  const impactText = document.querySelector('[data-impact-text]');
+  impactButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      impactButtons.forEach((item) => item.setAttribute('aria-pressed', 'false'));
+      button.setAttribute('aria-pressed', 'true');
+      if (impactTitle) impactTitle.textContent = button.getAttribute('data-impact');
+      if (impactText) impactText.textContent = button.getAttribute('data-impact-copy');
+    });
+  });
+
+  document.querySelectorAll('details[data-accordion]').forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+      detail.dataset.state = detail.open ? 'open' : 'closed';
+    });
+  });
+
+  const journeyRail = document.querySelector('[data-journey-rail]');
+  const journeyLinks = Array.from(document.querySelectorAll('[data-journey-link]'));
+  const journeyStages = Array.from(document.querySelectorAll('[data-journey-stage]'));
+  const progress = { seed: '0%', roots: '34%', stem: '67%', bloom: '100%' };
+
+  function setJourney(stage) {
+    journeyLinks.forEach((link) => {
+      const active = link.getAttribute('data-journey-link') === stage;
+      if (active) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+    if (journeyRail && Object.prototype.hasOwnProperty.call(progress, stage)) {
+      journeyRail.style.setProperty('--journey-progress', progress[stage]);
+    }
+  }
+
+  if ('IntersectionObserver' in window && journeyStages.length) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setJourney(visible.target.getAttribute('data-journey-stage'));
+    }, { rootMargin: '-26% 0px -48% 0px', threshold: [0.18, 0.35, 0.55] });
+    journeyStages.forEach((stage) => observer.observe(stage));
+  }
+
+  const revealTargets = Array.from(document.querySelectorAll('.reveal-on-scroll'));
+  if ('IntersectionObserver' in window && revealTargets.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    revealTargets.forEach((target) => revealObserver.observe(target));
+  } else {
+    revealTargets.forEach((target) => target.classList.add('is-visible'));
+  }
 })();
