@@ -27,80 +27,71 @@
     });
   }
 
-  function setupTabs(buttonSelector, panelSelector, idAttribute, options = {}) {
-    const buttons = Array.from(document.querySelectorAll(buttonSelector));
-    const panels = panelSelector ? Array.from(document.querySelectorAll(panelSelector)) : [];
-    if (!buttons.length) return;
+  const menuButton = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  if (menuButton && menu) {
+    menuButton.addEventListener('click', () => {
+      const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!expanded));
+      menu.toggleAttribute('data-open', !expanded);
+    });
 
-    function activate(button, shouldFocusPanel) {
-      const id = button.getAttribute(idAttribute);
-      buttons.forEach((item) => {
-        const active = item === button;
-        item.setAttribute('aria-selected', String(active));
-        item.setAttribute('tabindex', active ? '0' : '-1');
-      });
-
-      panels.forEach((panel) => {
-        const active = panel.getAttribute(options.panelAttribute || '') === id;
-        panel.toggleAttribute('hidden', !active);
-        if (active && shouldFocusPanel) panel.focus({ preventScroll: true });
-      });
-
-      if (typeof options.onActivate === 'function') options.onActivate(button, id);
-    }
-
-    buttons.forEach((button, index) => {
-      button.addEventListener('click', () => activate(button, false));
-      button.addEventListener('keydown', (event) => {
-        const last = buttons.length - 1;
-        let nextIndex = null;
-        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = index === last ? 0 : index + 1;
-        if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = index === 0 ? last : index - 1;
-        if (event.key === 'Home') nextIndex = 0;
-        if (event.key === 'End') nextIndex = last;
-        if (nextIndex !== null) {
-          event.preventDefault();
-          buttons[nextIndex].focus();
-          activate(buttons[nextIndex], false);
-        }
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menu.removeAttribute('data-open');
       });
     });
   }
 
-  setupTabs('[data-path-button]', '[data-path-panel]', 'data-path-button', {
-    panelAttribute: 'data-path-panel'
+  const pathButtons = Array.from(document.querySelectorAll('[data-path-button]'));
+  const pathPanels = Array.from(document.querySelectorAll('[data-path-panel]'));
+
+  function activatePath(id, shouldFocus) {
+    pathButtons.forEach((button) => {
+      const active = button.getAttribute('data-path-button') === id;
+      button.setAttribute('aria-selected', String(active));
+      button.setAttribute('tabindex', active ? '0' : '-1');
+    });
+
+    pathPanels.forEach((panel) => {
+      const active = panel.getAttribute('data-path-panel') === id;
+      panel.toggleAttribute('hidden', !active);
+      if (active && shouldFocus) panel.focus({ preventScroll: true });
+    });
+  }
+
+  pathButtons.forEach((button, index) => {
+    button.addEventListener('click', () => activatePath(button.getAttribute('data-path-button'), false));
+    button.addEventListener('keydown', (event) => {
+      const last = pathButtons.length - 1;
+      let nextIndex = null;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') nextIndex = index === last ? 0 : index + 1;
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') nextIndex = index === 0 ? last : index - 1;
+      if (event.key === 'Home') nextIndex = 0;
+      if (event.key === 'End') nextIndex = last;
+      if (nextIndex !== null) {
+        event.preventDefault();
+        pathButtons[nextIndex].focus();
+        activatePath(pathButtons[nextIndex].getAttribute('data-path-button'), false);
+      }
+    });
   });
 
-  setupTabs('[data-build]', null, 'data-build', {
-    onActivate(button) {
-      const panel = document.querySelector('#build-panel');
-      if (!panel) return;
-      const title = button.getAttribute('data-build');
-      const copy = button.getAttribute('data-build-copy');
-      panel.replaceChildren();
-      const kicker = document.createElement('p');
-      kicker.className = 'response-kicker';
-      kicker.textContent = title;
-      const paragraph = document.createElement('p');
-      paragraph.textContent = copy;
-      panel.append(kicker, paragraph);
-    }
+  const impactButtons = document.querySelectorAll('[data-impact]');
+  const impactText = document.querySelector('[data-impact-text]');
+  impactButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      impactButtons.forEach((item) => item.setAttribute('aria-pressed', 'false'));
+      button.setAttribute('aria-pressed', 'true');
+      if (impactText) impactText.textContent = button.getAttribute('data-impact-copy');
+    });
   });
 
-  setupTabs('[data-record]', null, 'data-record', {
-    onActivate(button) {
-      const panel = document.querySelector('#record-panel');
-      if (!panel) return;
-      const title = button.getAttribute('data-record');
-      const copy = button.getAttribute('data-record-copy');
-      panel.replaceChildren();
-      const kicker = document.createElement('p');
-      kicker.className = 'response-kicker';
-      kicker.textContent = title;
-      const paragraph = document.createElement('p');
-      paragraph.textContent = copy;
-      panel.append(kicker, paragraph);
-    }
+  document.querySelectorAll('details[data-accordion]').forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+      detail.dataset.state = detail.open ? 'open' : 'closed';
+    });
   });
 
   const impactButtons = Array.from(document.querySelectorAll('[data-impact]'));

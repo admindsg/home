@@ -11,310 +11,208 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header" id="top">
-    <a class="brand" href="#seed" aria-label="Discovery Sound Garden home">
+    <a class="brand" href="#top" aria-label="Discovery Sound Garden home">
       <span class="brand-mark" aria-hidden="true">DSG</span>
-      <span class="brand-text"><strong>Discovery Sound Garden</strong><small>NYC nonprofit music pathway</small></span>
+      <span><strong>Discovery Sound Garden</strong><small>NYC nonprofit music pathway</small></span>
     </a>
-    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">
-      <span class="menu-toggle__bar" aria-hidden="true"></span>
-      <span>Menu</span>
-    </button>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav"><span>Menu</span></button>
     <nav class="site-nav" id="primary-nav" data-mobile-menu aria-label="Primary navigation">
-      <a href="#seed">Start</a>
-      <a href="#roots">Learn</a>
-      <a href="#stem">Record</a>
-      <a href="#bloom">Perform</a>
+      <a href="#paths">Find Your Path</a>
+      <a href="#pathway">Learn → Record → Perform</a>
+      <a href="#programs">Programs</a>
+      <a href="#vanguard-voices">Vanguard Voices</a>
       <a href="#partner">Partner</a>
-      <a class="nav-donate" href="https://www.zeffy.com/en-US/donation-form/donate-to-dsg" data-link="donation" data-event="donate_click">Sponsor Opportunity</a>
+      <a class="nav-donate" href="#sponsor" data-link="donation" data-event="donate_click">Donate</a>
     </nav>
   </header>
 
-  <nav class="journey-rail" aria-label="Homepage growth journey" data-journey-rail style="--journey-progress: 0%;">
-    <a href="#seed" data-journey-link="seed" aria-current="true"><span aria-hidden="true"></span><strong>Seed</strong><em>Start</em></a>
-    <a href="#roots" data-journey-link="roots"><span aria-hidden="true"></span><strong>Roots</strong><em>Learn</em></a>
-    <a href="#stem" data-journey-link="stem"><span aria-hidden="true"></span><strong>Stem</strong><em>Record</em></a>
-    <a href="#bloom" data-journey-link="bloom"><span aria-hidden="true"></span><strong>Bloom</strong><em>Perform</em></a>
+  <nav class="journey-rail" aria-label="Homepage journey">
+    <a href="#paths" data-journey-link="start" aria-current="true"><span>Start</span></a>
+    <a href="#pathway" data-journey-link="learn"><span>Learn</span></a>
+    <a href="#recording" data-journey-link="record"><span>Record</span></a>
+    <a href="#vanguard-voices" data-journey-link="perform"><span>Perform</span></a>
   </nav>
 
   <main id="main">
-    <section class="stage stage-seed" id="seed" aria-labelledby="hero-title" data-journey-stage="seed">
-      <div class="stage__inner hero-grid">
-        <div class="hero-copy reveal-on-scroll">
-          <p class="eyebrow">Start where you are</p>
-          <h1 id="hero-title">Talent is everywhere. Opportunity starts here.</h1>
-          <p class="hero-lede">Discovery Sound Garden helps people learn, record, and perform through opportunity-centered music education, creative support, recording opportunity, performance pathways, and community proof.</p>
-          <p class="human-copy">Some people are starting from scratch. Some are returning to music after years away. Some have songs, voices, or ideas but no clear path forward. DSG creates practical next steps so talent can grow into skill, sound, and public proof.</p>
-          <p class="growth-question">What are you ready to grow?</p>
-          <div class="button-row">
-            <a class="button button-primary" href="#paths" data-event="path_cta_click">Choose your starting point</a>
-            <a class="button button-quiet" href="#sponsor" data-event="donate_click">Sponsor Opportunity</a>
-          </div>
-        </div>
-
-        <div class="growth-visual growth-visual-seed reveal-on-scroll" aria-label="A visual path from hidden music to public proof">
-          <div class="pulse-seed" aria-hidden="true"></div>
-          <svg class="sound-sprout" viewBox="0 0 420 420" role="img" aria-labelledby="sprout-title sprout-desc">
-            <title id="sprout-title">Music growing into public proof</title>
-            <desc id="sprout-desc">A seed-like soundwave grows into a curved path with musical rings.</desc>
-            <path class="sprout-line" d="M210 335 C200 260 230 230 215 174 C204 132 166 113 137 96" />
-            <path class="sprout-line sprout-line-alt" d="M210 335 C223 265 191 224 215 172 C237 126 286 112 322 94" />
-            <path class="soundwave" d="M116 260 C145 235 175 235 204 260 C234 286 265 286 304 256" />
-            <circle class="ring ring-one" cx="137" cy="96" r="18" />
-            <circle class="ring ring-two" cx="322" cy="94" r="24" />
-            <circle class="ring ring-three" cx="210" cy="335" r="32" />
-          </svg>
-          <div class="visual-caption">
-            <strong>From hidden music to public proof</strong>
-            <span>Start → Learn → Record → Perform</span>
-          </div>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Music Education • Mobile Recording • Performance Pathway</p>
+        <h1 id="hero-title">Talent is everywhere. Opportunity starts here.</h1>
+        <p class="hero-lede">Discovery Sound Garden helps people learn, record, and perform through opportunity-centered music education, creative support, recording opportunity, performance pathways, and community proof.</p>
+        <p>Some people are starting from scratch. Some are returning to music after years away. Some have songs, voices, or ideas but no clear path forward. DSG creates practical next steps so talent can grow into skill, sound, and public proof.</p>
+        <div class="button-row">
+          <a class="button primary" href="#paths" data-event="path_cta_click">Find Your Path</a>
+          <a class="button secondary" href="#sponsor" data-event="donate_click">Sponsor Opportunity</a>
         </div>
       </div>
-
-      <div class="stage__inner path-card" id="paths" aria-labelledby="paths-title">
-        <div class="section-heading reveal-on-scroll">
-          <p class="eyebrow">Find Your Path</p>
-          <h2 id="paths-title">Choose your starting point.</h2>
-          <p>You do not need to know the whole route yet. Pick the doorway that sounds most like you, and DSG will show the next step.</p>
-        </div>
-        <div class="path-selector reveal-on-scroll">
-          <div class="path-tabs" role="tablist" aria-label="Starting points">
-            <button id="tab-learning" type="button" role="tab" aria-selected="true" aria-controls="panel-learning" data-path-button="learning">I want to start learning.</button>
-            <button id="tab-singing" type="button" role="tab" aria-selected="false" aria-controls="panel-singing" tabindex="-1" data-path-button="singing">I want to sing with others.</button>
-            <button id="tab-recording" type="button" role="tab" aria-selected="false" aria-controls="panel-recording" tabindex="-1" data-path-button="recording">I want to create or record.</button>
-            <button id="tab-support" type="button" role="tab" aria-selected="false" aria-controls="panel-support" tabindex="-1" data-path-button="support">I want to support opportunity.</button>
-            <button id="tab-partner" type="button" role="tab" aria-selected="false" aria-controls="panel-partner" tabindex="-1" data-path-button="partner">I want to bring DSG to my community.</button>
-          </div>
-          <div class="path-panels">
-            <article id="panel-learning" role="tabpanel" tabindex="-1" aria-labelledby="tab-learning" data-path-panel="learning">
-              <p class="selected-path">You chose: I want to start learning.</p>
-              <h3>A first step with structure and care.</h3>
-              <p><strong>Who this is for:</strong> beginners, self-taught musicians, students, and returning adults who want a welcoming way in.</p>
-              <p><strong>You may be feeling:</strong> curious, rusty, intimidated, or unsure whether you are “ready.”</p>
-              <p><strong>How DSG helps:</strong> Foundations of Musicianship builds rhythm, listening, voice, songwriting, theory language, and confidence without turning uncertainty into shame.</p>
-              <p><strong>Best next step:</strong> Build the foundation.</p>
-              <a class="text-cta" href="#roots">Go to learning foundations</a>
-            </article>
-            <article id="panel-singing" role="tabpanel" tabindex="-1" aria-labelledby="tab-singing" data-path-panel="singing" hidden>
-              <p class="selected-path">You chose: I want to sing with others.</p>
-              <h3>A pathway from voice to belonging.</h3>
-              <p><strong>Who this is for:</strong> singers who want community, standards, rehearsal, and performance outcomes.</p>
-              <p><strong>You may be feeling:</strong> ready for a room where people care about both sound and belonging.</p>
-              <p><strong>How DSG helps:</strong> Vanguard Voices connects community singing with musicianship, confidence, care, and public proof.</p>
-              <p><strong>Best next step:</strong> Explore the performance pathway.</p>
-              <a class="text-cta" href="#bloom">Explore Vanguard Voices</a>
-            </article>
-            <article id="panel-recording" role="tabpanel" tabindex="-1" aria-labelledby="tab-recording" data-path-panel="recording" hidden>
-              <p class="selected-path">You chose: I want to create or record.</p>
-              <h3>Carry the idea into sound.</h3>
-              <p><strong>Who this is for:</strong> songwriters, emerging artists, singers, students, and people holding voice notes or unfinished ideas.</p>
-              <p><strong>You may be feeling:</strong> ready to make something real but blocked by cost, gear, confidence, or structure.</p>
-              <p><strong>How DSG helps:</strong> DSG connects creative learning with recording opportunity and public proof.</p>
-              <p><strong>Best next step:</strong> Build Your Sound.</p>
-              <a class="text-cta" href="#stem">See idea to proof</a>
-            </article>
-            <article id="panel-support" role="tabpanel" tabindex="-1" aria-labelledby="tab-support" data-path-panel="support" hidden>
-              <p class="selected-path">You chose: I want to support opportunity.</p>
-              <h3>Help talent move forward.</h3>
-              <p><strong>Who this is for:</strong> donors, neighbors, alumni, artists, and community allies.</p>
-              <p><strong>You may be feeling:</strong> aligned with the mission and looking for a concrete way to help.</p>
-              <p><strong>How DSG helps:</strong> gifts support first steps, learning foundations, recording opportunity, public performance, and the full pathway.</p>
-              <p><strong>Best next step:</strong> choose what you want to help grow.</p>
-              <a class="text-cta" href="#sponsor">Choose donor impact</a>
-            </article>
-            <article id="panel-partner" role="tabpanel" tabindex="-1" aria-labelledby="tab-partner" data-path-panel="partner" hidden>
-              <p class="selected-path">You chose: I want to bring DSG to my community.</p>
-              <h3>Build a pathway in the room you serve.</h3>
-              <p><strong>Who this is for:</strong> schools, community spaces, nonprofits, arts organizations, and creative partners.</p>
-              <p><strong>You may be feeling:</strong> excited about music programming and focused on fit, logistics, care, and outcomes.</p>
-              <p><strong>How DSG helps:</strong> DSG can shape workshops, singing pathways, recording support, community events, and performance outcomes around your community.</p>
-              <p><strong>Best next step:</strong> start a partnership conversation.</p>
-              <a class="text-cta" href="#partner">Go to partnership options</a>
-            </article>
-          </div>
-        </div>
-      </div>
+      <aside class="hero-panel" aria-label="DSG pathway summary">
+        <p class="panel-title">Talent should never be limited by circumstance.</p>
+        <ol>
+          <li><strong>Learn</strong><span>Build musicianship, confidence, and creative language.</span></li>
+          <li><strong>Record</strong><span>Turn ideas into demos, documentation, and creative proof.</span></li>
+          <li><strong>Perform</strong><span>Share growth through community performance and public outcomes.</span></li>
+        </ol>
+      </aside>
     </section>
 
-    <section class="stage opportunity-gap" id="opportunity" aria-labelledby="gap-title">
-      <div class="stage__inner narrow reveal-on-scroll">
-        <p class="eyebrow">The Opportunity Gap</p>
-        <h2 id="gap-title">The problem is not talent. It is opportunity.</h2>
-        <p class="large-copy">Music opportunity is often shaped by cost, confidence, time, transportation, gatekeeping, recording limitations, and whether someone has the right room to grow.</p>
-        <div class="friction-grid" aria-label="Common barriers DSG addresses">
-          <article><h3>Cost and confidence</h3><p>Lessons, coaching, studio time, and performance preparation can feel out of reach before someone gets to prove what they can do.</p></article>
-          <article><h3>Disconnected pathways</h3><p>Learning, recording, and performing are often treated as separate worlds, leaving people with progress but no next step.</p></article>
-          <article><h3>Lack of public proof</h3><p>Talent needs opportunities to become audible, visible, and shareable through demos, showcases, and community performance.</p></article>
-        </div>
-        <p class="response-copy">DSG connects education, recording opportunity, and performance outcomes so people are not left with isolated lessons, unfinished ideas, or private growth that never reaches the world.</p>
+    <section class="section paths" id="paths" aria-labelledby="paths-title">
+      <p class="eyebrow">Find Your Path</p>
+      <div class="section-heading">
+        <h2 id="paths-title">Start with the path that sounds most like you.</h2>
+        <p>DSG welcomes beginners, returning adults, emerging artists, singers, donors, schools, partners, and community allies. Choose a path to see a practical next step.</p>
       </div>
-    </section>
-
-    <section class="stage stage-roots" id="roots" aria-labelledby="roots-title" data-journey-stage="roots">
-      <div class="stage__inner stage-split">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Build the skill</p>
-          <h2 id="roots-title">Learning is where confidence gets roots.</h2>
-          <p class="large-copy">Foundations of Musicianship gives beginners, returning adults, and developing musicians a serious but kind place to build rhythm, reading, voice, songwriting, listening, and confidence.</p>
-          <p>The goal is not just attendance. The goal is growth people can hear, see, and share.</p>
+      <div class="path-selector">
+        <div class="path-tabs" role="tablist" aria-label="Audience paths">
+          <button id="tab-learning" type="button" role="tab" aria-selected="true" aria-controls="panel-learning" tabindex="0" data-path-button="learning" data-event="path_select">Start learning music</button>
+          <button id="tab-singing" type="button" role="tab" aria-selected="false" aria-controls="panel-singing" tabindex="-1" data-path-button="singing" data-event="path_select">Sing with others</button>
+          <button id="tab-recording" type="button" role="tab" aria-selected="false" aria-controls="panel-recording" tabindex="-1" data-path-button="recording" data-event="path_select">Create or record</button>
+          <button id="tab-support" type="button" role="tab" aria-selected="false" aria-controls="panel-support" tabindex="-1" data-path-button="support" data-event="path_select">Support opportunity</button>
+          <button id="tab-partner" type="button" role="tab" aria-selected="false" aria-controls="panel-partner" tabindex="-1" data-path-button="partner" data-event="path_select">Partner with DSG</button>
         </div>
-        <div class="growth-visual growth-visual-roots reveal-on-scroll" aria-hidden="true">
-          <span class="staff-line"></span><span class="staff-line"></span><span class="staff-line"></span><span class="staff-line"></span>
-          <span class="root root-a"></span><span class="root root-b"></span><span class="root root-c"></span>
-        </div>
-      </div>
-      <div class="stage__inner build-module reveal-on-scroll" aria-labelledby="build-title">
-        <div class="module-intro">
-          <p class="eyebrow">Foundations of Musicianship</p>
-          <h3 id="build-title">What do you need roots in?</h3>
-          <p>Choose a focus and see how DSG turns uncertainty into practical musicianship.</p>
-        </div>
-        <div class="module-control-grid">
-          <div class="pill-list" role="tablist" aria-label="Learning foundations">
-            <button type="button" role="tab" aria-selected="true" aria-controls="build-panel" data-build="Confidence" data-build-copy="You do not need to arrive polished. DSG creates practical, low-pressure rooms where people can try, listen, ask questions, and build skill without shame.">Confidence</button>
-            <button type="button" role="tab" aria-selected="false" aria-controls="build-panel" tabindex="-1" data-build="Rhythm" data-build-copy="Rhythm becomes usable when it is felt, counted, spoken, clapped, sung, and connected to real songs. DSG helps participants build timing they can carry into rehearsal, recording, and performance.">Rhythm</button>
-            <button type="button" role="tab" aria-selected="false" aria-controls="build-panel" tabindex="-1" data-build="Reading music" data-build-copy="Reading music is introduced as a practical tool, not a gatekeeping test. Participants connect notation, listening, and voice so written music supports real expression.">Reading music</button>
-            <button type="button" role="tab" aria-selected="false" aria-controls="build-panel" tabindex="-1" data-build="Voice" data-build-copy="Voice work connects breath, pitch, listening, blend, and confidence. DSG helps singers strengthen their sound while preparing for community singing and performance pathways.">Voice</button>
-            <button type="button" role="tab" aria-selected="false" aria-controls="build-panel" tabindex="-1" data-build="Songwriting" data-build-copy="Songwriting support helps ideas become lyrics, melody, structure, and a next creative draft. The pathway can then connect writing to recording opportunity and public proof.">Songwriting</button>
-            <button type="button" role="tab" aria-selected="false" aria-controls="build-panel" tabindex="-1" data-build="Returning after time away" data-build-copy="Returning after time away starts with respect for what is already in you. DSG creates a serious but kind re-entry point for rebuilding practice, confidence, and community.">Returning after time away</button>
-          </div>
-          <article class="response-panel" id="build-panel" role="tabpanel" aria-live="polite">
-            <p class="response-kicker">Confidence</p>
-            <p>You do not need to arrive polished. DSG creates practical, low-pressure rooms where people can try, listen, ask questions, and build skill without shame.</p>
+        <div class="path-panels">
+          <article id="panel-learning" role="tabpanel" tabindex="-1" aria-labelledby="tab-learning" data-path-panel="learning">
+            <h3>For beginners and returning adults</h3>
+            <p><strong>You may be feeling:</strong> curious, rusty, intimidated, or unsure whether there is a welcoming first step.</p>
+            <p><strong>How DSG helps:</strong> Foundations of Musicianship and workshops build rhythm, listening, theory, singing, songwriting, and confidence without treating uncertainty as a weakness.</p>
+            <p><strong>Best next step:</strong> Start with Foundations or join event notifications for the next learning opportunity.</p>
+            <a class="text-cta" href="#programs" data-event="path_cta_click">Explore learning pathways</a>
+          </article>
+          <article id="panel-singing" role="tabpanel" tabindex="-1" aria-labelledby="tab-singing" data-path-panel="singing" hidden>
+            <h3>For community singers</h3>
+            <p><strong>You may be feeling:</strong> excited to sing, cautious about standards, or looking for belonging that still takes musicianship seriously.</p>
+            <p><strong>How DSG helps:</strong> Vanguard Voices creates a caring performance pathway where community singing, preparation, leadership, and confidence meet.</p>
+            <p><strong>Best next step:</strong> Explore Vanguard Voices and join notifications for future rehearsals and performances.</p>
+            <a class="text-cta" href="#vanguard-voices" data-event="path_cta_click">Explore Vanguard Voices</a>
+          </article>
+          <article id="panel-recording" role="tabpanel" tabindex="-1" aria-labelledby="tab-recording" data-path-panel="recording" hidden>
+            <h3>For songwriters and emerging artists</h3>
+            <p><strong>You may be feeling:</strong> ready to make something real but blocked by cost, gear, time, or unclear next steps.</p>
+            <p><strong>How DSG helps:</strong> Recording opportunity and creative support help ideas become demos, documentation, and work people can hear and share.</p>
+            <p><strong>Best next step:</strong> Review the recording pathway and join notifications so DSG can share openings and community opportunities.</p>
+            <a class="text-cta" href="#programs" data-event="path_cta_click">Explore recording opportunity</a>
+          </article>
+          <article id="panel-support" role="tabpanel" tabindex="-1" aria-labelledby="tab-support" data-path-panel="support" hidden>
+            <h3>For donors and community allies</h3>
+            <p><strong>You may be feeling:</strong> aligned with the mission and looking for a concrete way to help talent move forward.</p>
+            <p><strong>How DSG helps:</strong> Gifts support workshop seats, learning materials, sponsored seats, demos, and community programming across the Learn → Record → Perform pathway.</p>
+            <p><strong>Best next step:</strong> Choose an impact level and sponsor opportunity through Zeffy.</p>
+            <a class="text-cta" href="#sponsor" data-event="path_cta_click">See donor impact</a>
+          </article>
+          <article id="panel-partner" role="tabpanel" tabindex="-1" aria-labelledby="tab-partner" data-path-panel="partner" hidden>
+            <h3>For schools, organizations, and creative partners</h3>
+            <p><strong>You may be feeling:</strong> interested in music programming but focused on fit, logistics, outcomes, and care for your community.</p>
+            <p><strong>How DSG helps:</strong> DSG can support workshops, singing pathways, recording support, community events, and performance outcomes.</p>
+            <p><strong>Best next step:</strong> Review partnership options and use the stay-connected section to begin the conversation.</p>
+            <a class="text-cta" href="#partner" data-event="partner_click">Start a partnership conversation</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="stage stage-stem" id="stem" aria-labelledby="stem-title" data-journey-stage="stem">
-      <div class="stage__inner stage-split reverse">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Record the proof</p>
-          <h2 id="stem-title">Private growth becomes something people can hear.</h2>
-          <p class="large-copy">Recording opportunity becomes concrete when an idea moves through support, preparation, a focused session, and a demo people can actually use.</p>
-          <p>DSG’s mobile recording and creative support are not about luxury studio polish. They are about helping talent become audible, documented, and ready for the next room.</p>
-        </div>
-        <div class="growth-visual growth-visual-stem reveal-on-scroll" aria-hidden="true">
-          <span class="mic"></span>
-          <span class="wave wave-a"></span>
-          <span class="wave wave-b"></span>
-          <span class="wave wave-c"></span>
-        </div>
+    <section class="section gap" id="opportunity" aria-labelledby="gap-title">
+      <p class="eyebrow">The Opportunity Gap</p>
+      <h2 id="gap-title">The problem is not talent. It is opportunity.</h2>
+      <p class="large-copy">Music opportunity is often shaped by cost, confidence, time, transportation, gatekeeping, recording limitations, and whether someone has the right room to grow.</p>
+      <div class="friction-grid" aria-label="Common barriers DSG addresses">
+        <article><h3>Cost and confidence</h3><p>Lessons, coaching, studio time, and performance preparation can feel out of reach before someone ever gets to prove what they can do.</p></article>
+        <article><h3>Disconnected pathways</h3><p>Learning, recording, and performing are often treated as separate worlds, leaving participants with private progress but no next step.</p></article>
+        <article><h3>Lack of public proof</h3><p>Talent needs opportunities to become audible, visible, and shareable through demos, showcases, and community performance.</p></article>
       </div>
-      <div class="stage__inner record-module reveal-on-scroll" aria-labelledby="record-title">
-        <div class="module-intro">
-          <p class="eyebrow">Recording Opportunity</p>
-          <h3 id="record-title">From idea to proof.</h3>
-          <p>Tap each step to see how DSG turns a voice note, melody, lyric, or creative goal into something shareable.</p>
-        </div>
-        <div class="record-flow" role="tablist" aria-label="From idea to proof steps">
-          <button type="button" role="tab" aria-selected="true" aria-controls="record-panel" data-record="Idea" data-record-copy="A song, melody, lyric, voice memo, or creative goal becomes the starting point. DSG treats the idea as worth developing before it is polished.">Idea</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="record-panel" tabindex="-1" data-record="Session" data-record-copy="Guided support, musicianship, arrangement, or recording preparation turns private growth into a focused session.">Session</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="record-panel" tabindex="-1" data-record="Demo" data-record-copy="A demo becomes a recorded artifact of growth: something audible that can guide the next step.">Demo</button>
-          <button type="button" role="tab" aria-selected="false" aria-controls="record-panel" tabindex="-1" data-record="Shareable proof" data-record-copy="Shareable proof is something the artist can use, submit, perform, or build from.">Shareable proof</button>
-        </div>
-        <article class="response-panel record-response" id="record-panel" role="tabpanel" aria-live="polite">
-          <p class="response-kicker">Idea</p>
-          <p>A song, melody, lyric, voice memo, or creative goal becomes the starting point. DSG treats the idea as worth developing before it is polished.</p>
-        </article>
+      <p class="response-copy">DSG connects education, recording opportunity, and performance outcomes so people are not left with isolated lessons, unfinished ideas, or private growth that never reaches the world.</p>
+    </section>
+
+    <section class="section pathway" id="pathway" aria-labelledby="pathway-title">
+      <p class="eyebrow">Build the skill. Record the proof. Let the world hear it.</p>
+      <h2 id="pathway-title">Learn → Record → Perform</h2>
+      <div class="pathway-grid">
+        <article><span class="step-number">01</span><h3>Learn</h3><p>Workshops, musicianship, singing, songwriting, rhythm, theory, and confidence help people build a foundation they can carry forward.</p></article>
+        <article><span class="step-number">02</span><h3>Record</h3><p>Support for turning ideas into demos, documentation, and creative proof helps talent become something people can hear and share.</p></article>
+        <article><span class="step-number">03</span><h3>Perform</h3><p>Vanguard Voices, showcases, community performance, and public outcomes turn growth into visible proof and shared momentum.</p></article>
+      </div>
+      <p class="large-copy">The goal is not just attendance. The goal is growth people can hear, see, and share.</p>
+    </section>
+
+    <section class="section programs" id="programs" aria-labelledby="programs-title">
+      <p class="eyebrow">Programs and Pathways</p>
+      <div class="section-heading">
+        <h2 id="programs-title">Practical ways DSG turns opportunity into progress.</h2>
+        <p>Each program connects to the same promise: learn the craft, create proof, and move toward performance or community outcomes.</p>
+      </div>
+      <div class="accordion-list">
+        <details data-accordion open><summary>Foundations of Musicianship</summary><div><p>Foundations of Musicianship is for beginners, returning adults, and developing musicians who want structure without intimidation. Participants build rhythm, listening, melody, harmony, theory language, singing, songwriting, and confidence. It creates the base for future recording, ensemble work, and performance.</p><a href="#stay-connected">Get learning updates</a></div></details>
+        <details data-accordion><summary>Vanguard Voices</summary><div><p>Vanguard Voices is DSG’s flagship singing and performance pathway. It brings community singers into a setting with high standards, care, belonging, musicianship, and public outcomes. The pathway helps singers grow in confidence while showing the community what opportunity can become.</p><a href="#vanguard-voices">Explore Vanguard Voices</a></div></details>
+        <details data-accordion><summary>Recording Opportunity</summary><div><p>Recording opportunity supports artists, songwriters, students, and community partners who need help turning ideas into demos or documentation. DSG’s mobile recording approach can meet people closer to where they are and connect creative support to learning and performance goals. The focus is not luxury studio polish; it is credible proof that helps music move forward.</p><a href="#stay-connected">Get recording updates</a></div></details>
+        <details data-accordion><summary>Partner Programming</summary><div><p>Partner programming is for schools, community spaces, nonprofits, arts organizations, and aligned creative partners. DSG can support workshops, residencies, singing pathways, recording activations, showcases, and community events. The goal is a practical music pathway that fits the people in the room and leads to outcomes they can hear, see, and share.</p><a href="#partner">Start a partnership conversation</a></div></details>
       </div>
     </section>
 
-    <section class="stage stage-bloom" id="bloom" aria-labelledby="bloom-title" data-journey-stage="bloom">
-      <div class="stage__inner bloom-layout">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Let the world hear it</p>
-          <h2 id="bloom-title">Vanguard Voices is where opportunity becomes sound.</h2>
-          <p class="large-copy">Vanguard Voices is DSG’s flagship performance pathway, built with high standards, care, musicianship, belonging, and community.</p>
-          <p>Performance is not just a final event. It is public proof: the moment confidence, preparation, recording, and community can be heard by others.</p>
-          <a class="button button-primary" href="#stay-connected" data-event="path_cta_click">Explore Vanguard Voices</a>
-        </div>
-        <div class="proof-module reveal-on-scroll" aria-labelledby="proof-title">
-          <h3 id="proof-title">What does bloom look like?</h3>
-          <div class="proof-grid">
-            <article><span aria-hidden="true">♪</span><strong>Singing with others</strong><p>Community voice with preparation and care.</p></article>
-            <article><span aria-hidden="true">↗</span><strong>Performing publicly</strong><p>Growth becomes visible in front of people.</p></article>
-            <article><span aria-hidden="true">●</span><strong>Recording a demo</strong><p>Sound becomes documentation and proof.</p></article>
-            <article><span aria-hidden="true">✦</span><strong>Joining a showcase</strong><p>Participants move toward real outcomes.</p></article>
-            <article><span aria-hidden="true">+</span><strong>Building confidence</strong><p>Skill grows through supported standards.</p></article>
-            <article><span aria-hidden="true">)))</span><strong>Letting people hear the work</strong><p>The private process becomes public momentum.</p></article>
+    <section class="section proof" id="vanguard-voices" aria-labelledby="voices-title">
+      <div>
+        <p class="eyebrow">Vanguard Voices / Public Proof</p>
+        <h2 id="voices-title">Where opportunity becomes sound.</h2>
+        <p class="large-copy">Vanguard Voices is DSG’s flagship performance pathway and public proof of what opportunity can become.</p>
+        <p>Community singing becomes more than a gathering when people are supported with high standards, care, confidence, musicianship, belonging, and performance goals. Vanguard Voices gives singers a place to prepare, listen, lead, and step into public outcomes together.</p>
+        <a class="button primary" href="#stay-connected" data-event="path_cta_click">Explore Vanguard Voices</a>
+      </div>
+      <div class="proof-card" aria-label="Vanguard Voices outcomes">
+        <ul>
+          <li><strong>Community singing</strong><span>Voices learning how to listen, blend, and lead together.</span></li>
+          <li><strong>High standards with care</strong><span>Serious preparation without shutting people out.</span></li>
+          <li><strong>Performance as proof</strong><span>Growth becomes something the community can hear and see.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section sponsor" id="sponsor" aria-labelledby="sponsor-title">
+      <p class="eyebrow">Sponsor Opportunity</p>
+      <div class="sponsor-layout">
+        <div>
+          <h2 id="sponsor-title">Your gift helps talent move from possibility to proof.</h2>
+          <p>Discovery Sound Garden is a NYC-based 501(c)(3) nonprofit public charity. Donations help support learning, recording opportunity, materials, sponsored seats, community programming, and performance pathways.</p>
+          <div class="impact-buttons" aria-label="Donation impact levels">
+            <button type="button" aria-pressed="false" data-impact="$25" data-impact-copy="$25 helps open a workshop seat." data-event="donation_amount_select">$25</button>
+            <button type="button" aria-pressed="true" data-impact="$50" data-impact-copy="$50 supports learning materials or participant support." data-event="donation_amount_select">$50</button>
+            <button type="button" aria-pressed="false" data-impact="$100" data-impact-copy="$100 helps fund sponsored seats, demos, and community programming." data-event="donation_amount_select">$100</button>
+            <button type="button" aria-pressed="false" data-impact="custom" data-impact-copy="Custom gifts help build the full Learn → Record → Perform pathway." data-event="donation_amount_select">Custom</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="stage programs" id="programs" aria-labelledby="programs-title">
-      <div class="stage__inner reveal-on-scroll">
-        <div class="section-heading">
-          <p class="eyebrow">Programs and Pathways</p>
-          <h2 id="programs-title">One pathway, multiple ways in.</h2>
-          <p>Each program connects to the same promise: learn the craft, create proof, and move toward performance or community outcomes.</p>
-        </div>
-        <div class="accordion-list">
-          <details data-accordion open><summary>Foundations of Musicianship</summary><div><p>Foundations of Musicianship is for beginners, returning adults, and developing musicians who want structure without intimidation. Participants build rhythm, listening, melody, harmony, theory language, singing, songwriting, and confidence. It creates the base for future recording, ensemble work, and performance.</p><a href="#roots">Explore learning foundations</a></div></details>
-          <details data-accordion><summary>Vanguard Voices</summary><div><p>Vanguard Voices is DSG’s flagship singing and performance pathway. It brings community singers into a setting with high standards, care, belonging, musicianship, and public outcomes. The pathway helps singers grow in confidence while showing the community what opportunity can become.</p><a href="#bloom">Explore Vanguard Voices</a></div></details>
-          <details data-accordion><summary>Recording Opportunity</summary><div><p>Recording opportunity supports artists, songwriters, students, and community partners who need help turning ideas into demos or documentation. DSG’s mobile recording approach can meet people closer to where they are and connect creative support to learning and performance goals. The focus is credible proof that helps music move forward.</p><a href="#stem">See idea to proof</a></div></details>
-          <details data-accordion><summary>Partner Programming</summary><div><p>Partner programming is for schools, community spaces, nonprofits, arts organizations, and aligned creative partners. DSG can support workshops, residencies, singing pathways, recording activations, showcases, and community events. The goal is a practical music pathway that fits the people in the room and leads to outcomes they can hear, see, and share.</p><a href="#partner">Start a partnership conversation</a></div></details>
+        <div class="impact-card" aria-live="polite">
+          <p class="impact-label">Selected impact</p>
+          <p class="impact-text" data-impact-text>$50 supports learning materials or participant support.</p>
+          <a class="button primary" href="#" data-link="donation" data-event="donate_click">Sponsor Opportunity</a>
         </div>
       </div>
     </section>
 
-    <section class="stage sponsor" id="sponsor" aria-labelledby="sponsor-title">
-      <div class="stage__inner sponsor-layout">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Sponsor Opportunity</p>
-          <h2 id="sponsor-title">Choose what you want to help grow.</h2>
-          <p class="large-copy">Your gift helps talent move through the pathway from a first step to learning, recording, performance, and public proof.</p>
-          <p class="trust-copy">Discovery Sound Garden is a NYC-based 501(c)(3) nonprofit public charity.</p>
-        </div>
-        <div class="donor-module reveal-on-scroll">
-          <div class="donor-choices" aria-label="Donation growth choices">
-            <button type="button" aria-pressed="true" data-impact="A first step" data-impact-copy="$25 helps open a workshop seat for someone ready to begin.">A first step</button>
-            <button type="button" aria-pressed="false" data-impact="A foundation" data-impact-copy="$50 supports learning materials or participant support for Foundations of Musicianship.">A foundation</button>
-            <button type="button" aria-pressed="false" data-impact="A recording opportunity" data-impact-copy="$100 helps fund sponsored seats, demos, and creative documentation.">A recording opportunity</button>
-            <button type="button" aria-pressed="false" data-impact="A public performance" data-impact-copy="Custom gifts help support rehearsals, showcases, Vanguard Voices outcomes, and community performance.">A public performance</button>
-            <button type="button" aria-pressed="false" data-impact="The full pathway" data-impact-copy="Custom gifts help build the full Start → Learn → Record → Perform pathway.">The full pathway</button>
-          </div>
-          <article class="impact-card" aria-live="polite">
-            <p class="response-kicker" data-impact-title>A first step</p>
-            <p class="impact-text" data-impact-text>$25 helps open a workshop seat for someone ready to begin.</p>
-            <a class="button button-primary" href="https://www.zeffy.com/en-US/donation-form/donate-to-dsg" data-link="donation" data-event="donate_click">Sponsor Opportunity</a>
-          </article>
-        </div>
+    <section class="section partner" id="partner" aria-labelledby="partner-title">
+      <p class="eyebrow">Partner With DSG</p>
+      <h2 id="partner-title">Bring opportunity-centered music programming to your community.</h2>
+      <p class="large-copy">DSG can support opportunity-centered music programming through workshops, singing pathways, recording support, community events, and performance outcomes.</p>
+      <div class="partner-grid">
+        <article><h3>Schools and youth spaces</h3><p>Structured musicianship, songwriting, singing, and recording support can help students build confidence and creative proof.</p></article>
+        <article><h3>Community organizations</h3><p>DSG can shape workshops, showcases, and music experiences around the needs of local communities and returning adult learners.</p></article>
+        <article><h3>Creative partners</h3><p>Aligned partners can collaborate on recording activations, public performance, community events, and pathways that move talent forward.</p></article>
       </div>
+      <a class="button secondary" href="#stay-connected" data-event="partner_click">Start a Partnership Conversation</a>
     </section>
 
-    <section class="stage partner" id="partner" aria-labelledby="partner-title">
-      <div class="stage__inner stage-split">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Partner With DSG</p>
-          <h2 id="partner-title">Bring opportunity-centered music programming to your community.</h2>
-          <p class="large-copy">DSG can support workshops, singing pathways, recording support, community events, and performance outcomes for schools, community spaces, organizations, and creative partners.</p>
-          <a class="button button-quiet" href="#stay-connected" data-event="partner_click">Start a Partnership Conversation</a>
-        </div>
-        <div class="partner-cards reveal-on-scroll">
-          <article><h3>Schools and youth spaces</h3><p>Structured musicianship, songwriting, singing, and recording support can help students build confidence and creative proof.</p></article>
-          <article><h3>Community organizations</h3><p>DSG can shape workshops, showcases, and music experiences around the needs of local communities and returning adult learners.</p></article>
-          <article><h3>Creative partners</h3><p>Aligned partners can collaborate on recording activations, public performance, community events, and pathways that move talent forward.</p></article>
-        </div>
+    <section class="section connected" id="stay-connected" aria-labelledby="connect-title">
+      <p class="eyebrow">Stay Connected</p>
+      <div class="section-heading">
+        <h2 id="connect-title">Join event notifications and follow the music.</h2>
+        <p>Get DSG event notifications, follow on Instagram, or DM <strong>“MUSIC”</strong> to start a conversation.</p>
       </div>
-    </section>
-
-    <section class="stage connected" id="stay-connected" aria-labelledby="connect-title">
-      <div class="stage__inner connect-layout">
-        <div class="stage-copy reveal-on-scroll">
-          <p class="eyebrow">Stay Connected</p>
-          <h2 id="connect-title">Hear about the next room before it opens.</h2>
-          <p class="large-copy">Join event notifications, follow DSG on Instagram, or DM “MUSIC” to stay close to workshops, Vanguard Voices, recording opportunities, and community events.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="https://www.zeffy.com/en-US/embed/newsletter-form/get-notifications-for-events" data-link="eventNotifications" data-event="newsletter_click">Join event notifications</a>
-            <a class="button button-quiet" href="https://www.instagram.com/discoverysoundgarden/?utm_source=ig_embed&amp;ig_rid=AiLeIGBfsbzvnTIXAc5oqQ4" data-link="instagram" data-event="instagram_click">Follow on Instagram</a>
-          </div>
+      <div class="connect-grid">
+        <div class="embed-frame">
+          <iframe title="Get notifications for Discovery Sound Garden events" data-zeffy-embed loading="lazy"></iframe>
+          <p><a href="#" data-link="eventNotifications" data-event="newsletter_click">Open notification form</a></p>
         </div>
-        <div class="embed-card reveal-on-scroll">
-          <iframe title="Join Discovery Sound Garden event notifications" data-zeffy-embed loading="lazy"></iframe>
-          <p>If the form is unavailable in your browser, use the event notifications link above.</p>
+        <div class="connect-card">
+          <h3>Follow Discovery Sound Garden</h3>
+          <p>See rehearsals, program notes, performance moments, and community updates from DSG.</p>
+          <a class="button secondary" href="#" data-link="instagram" data-event="instagram_click">Follow on Instagram</a>
+          <p class="small-copy">On Instagram, DM <strong>“MUSIC”</strong> if you want to learn, sing, record, partner, volunteer, or support opportunity.</p>
         </div>
       </div>
     </section>
@@ -324,17 +222,17 @@
     <div>
       <strong>Discovery Sound Garden</strong>
       <p>Talent is everywhere. Opportunity starts here.</p>
-      <p>NYC-based 501(c)(3) nonprofit music organization.</p>
-      <p>Start → Learn → Record → Perform</p>
+      <p>NYC-based 501(c)(3) nonprofit music organization. Learn → Record → Perform.</p>
     </div>
     <nav aria-label="Footer navigation">
-      <a href="#seed">Start</a>
-      <a href="#roots">Learn</a>
-      <a href="#stem">Record</a>
-      <a href="#bloom">Perform</a>
-      <a href="https://www.zeffy.com/en-US/donation-form/donate-to-dsg" data-link="donation">Donate</a>
-      <a href="https://www.instagram.com/discoverysoundgarden/?utm_source=ig_embed&amp;ig_rid=AiLeIGBfsbzvnTIXAc5oqQ4" data-link="instagram">Instagram</a>
-      <a href="https://www.zeffy.com/en-US/embed/newsletter-form/get-notifications-for-events" data-link="eventNotifications">Event notifications</a>
+      <a href="#paths">Find Your Path</a>
+      <a href="#programs">Programs</a>
+      <a href="#" data-link="donation" data-event="donate_click">Donate</a>
+      <a href="#" data-link="eventNotifications" data-event="newsletter_click">Event notifications</a>
+      <a href="#" data-link="instagram" data-event="instagram_click">Instagram</a>
+      <a href="#stay-connected">Contact</a>
+      <a href="#stay-connected">Transparency</a>
+      <a href="#stay-connected">Privacy</a>
     </nav>
   </footer>
 </body>
